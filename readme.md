@@ -21,6 +21,8 @@ Get a specific car     | `/api/vehicle`   | `GET`
 Get a list vehicles    | `/api/vehicles`  | `GET`
 Refuel a vehicle       | `/api/refuel`    | `POST`
 
+When recording a refuel via the API using `/api/refuel` endpoint you need to specify the `vehicleId`, the amount paid for fuel, how many liters of fuel was bought, and the current `odo meter reading` (*distance* in the API) of the vehicle (the total kilometers on the vehicles clock) and if the vehicle was filled up or not. The fuel consumption algorithm depends on the fact that you are recording details each time the tank is being filled up. It use the difference between the last time you refueled the tank and how much was needed at last refuel to fill up the tank. Which will be the quantity of fuel used in litred
+
 ## What you need to build
 
 Use the API to build:
@@ -30,6 +32,10 @@ Use the API to build:
 * A screen where a car refuel can be recorded.
 
 ## What to do
+
+### Get your own copy
+
+Fork and the clone this repo into your projects folder.
 
 ### API setup and testing
 
@@ -69,5 +75,3 @@ You have until `16h30` on `30 November 2023` to complete this.
 Please let us know urgently if you have any loadshedding related issues. Then we will discuss with you how we can accomodate you in this regard.
 
 Please commit your code locally to git by 16h30 even if you can't push to GitHub due to load shedding as we would like a benchmark of your progress at 16h30. Even if you have made alternative arrangements due to loadshedding with us.
-
-
