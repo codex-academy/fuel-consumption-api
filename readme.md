@@ -4,7 +4,7 @@ The fuel consumption API keeps track of vehicle fuel usage.
 
 For each vehicle it stores: 
 
-* the `total distance` travel,
+* the `total distance` traveled,
 * the `total liters` of fuel entered,
 * and calculates the `fuel consumption` from the travel distance & total liters entered.
 
