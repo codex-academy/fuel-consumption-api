@@ -12,7 +12,7 @@ and calculates the `fuel consumption` from the travel distance & total liters en
 
 The API will also keep track of the total amount spent on fuel & the total distance travelled by each vehicle.
 
-If the vehcicle was *filled up* the last *two times* it was refueled the API will return the vehicles `fuel_consumption` in liters per kilometers (`kilometers the vehicle traveled per litre`). If the vehicle wasn't filled up at the last two times the API will return `null` for `fuel_consumption`.
+If the vehcicle was *filled up* to capacity the last *two times* it was refueled the API will return the vehicles `fuel_consumption` in liters per kilometers (`kilometers the vehicle traveled per litre`). If the vehicle wasn't filled up to capacity the last two times it was refueled the API will return `null` for `fuel_consumption`.
 
 > The API can calculate how much kilometers a car can travel per 1 liter of petrol based on the fuel entered and the distance traveled.
 
@@ -25,7 +25,7 @@ Get a specific car     | `/api/vehicle`   | `GET`
 Get a list vehicles    | `/api/vehicles`  | `GET`
 Refuel a vehicle       | `/api/refuel`    | `POST`
 
-When recording a refuel via the API using `/api/refuel` endpoint you need to specify the `vehicleId`, the amount paid for fuel, how many liters of fuel was bought, and the current `odometer reading` (*distance* in the API) of the vehicle (the total kilometers on the vehicles clock) and if the vehicle was filled up or not. The fuel consumption algorithm depends on the fact that you are recording details each time the tank is being filled up. It use the difference between the last time you refueled the tank and how much was needed at last refuel to fill up the tank. Which will be the quantity of fuel used in litred
+When recording a refuel via the API using `/api/refuel` endpoint you need to specify the `vehicleId`, the amount paid for fuel, how many liters of fuel was bought, and the current `odometer reading` (*distance* in the API) of the vehicle (the total kilometers on the vehicles clock) and if the vehicle was filled up to capacity or not. The fuel consumption algorithm depends on the fact that you are recording details each time the tank is being filled up. It use the difference between the last time you refueled the tank and how much was needed at last refuel to fill up the tank. Which will be the quantity of fuel used in litres.
 
 ## What you need to build
 
